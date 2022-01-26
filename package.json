@@ -1,0 +1,24 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Realtime chat application",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahin8220/myCahtApp.git"
+  },
+  "author": "Şahin Nazlı",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sahin8220/myCahtApp/issues"
+  },
+  "homepage": "https://github.com/Sahin8220/myCahtApp#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1",
+    "sqlite3": "^5.0.2"
+  }
+}
