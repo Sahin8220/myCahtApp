@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js')
+    link(rel='stylesheet' href='assets/css/style.css')
+    title chatApp Login
+  body.text-center
+    form#regForm.form-signin(action="/makeRegister",method="POST", autocomplete="off")
+      img.mb-4(src="https://ui-avatars.com/api/?name=ChatApp", alt="", width="72", height="72")
+      h1.h3.mb-3.font-weight-normal Please Register
+      label.sr-only(for="user_name") Name Surname*
+      input.form-control(type="text", placeholder="Your Name",name="user_name" , required, autofocus)
+      label.sr-only(for="user_mail") E-Mail*
+      input.form-control(type="email", placeholder="Your E-Mail",name="user_mail" , required, autofocus)
+      label.sr-only(for="user_pass") Password*
+      input#user_pass.form-control(type="password",autocomplete="new-password", placeholder="Password",name="user_pass",required)
+      label.sr-only(for="user_re_pass") Re-Type Password*
+      input.form-control(type="password", placeholder="Re-Type Password",name="user_re_pass",required)
+      label.sr-only(for="language") Language*
+      select.form-control.language(name="language",required)
+        option(value="", disabled="true", selected="true") Select Your Language
+      label.sr-only(for="country") Country*
+      select.form-control.country(name="country",required)
+        option(value="", disabled="true", selected="true") Select Your Country
+      button.btn.btn-lg.btn-primary.btn-block(type="submit") Register
+      p 
+       a(href="/login") Turn Back Login
+script(src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js')
+script(src='assets/js/register.js')

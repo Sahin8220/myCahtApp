@@ -1,0 +1,70 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  meta(name='description' content='Chat Application')
+  meta(name='author' content='Şahin Nazlı')
+  meta(name='keywords' content='chat,socketio')
+  title MyChatApp
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css')
+  link(rel='stylesheet' href='assets/css/style.css')
+  script(src='https://cdn.socket.io/4.4.0/socket.io.min.js' integrity='sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj' crossorigin='anonymous')
+.container.py-5.px-4
+  .row.rounded-lg.overflow-hidden.shadow
+    .col-5.px-0.headdiv
+      .bg-white
+        .bg-gray.px-4.py-2.bg-light
+          p.h5.mb-0.py-1 Online Users 
+            i.fa.fa-sign-out.cikis(onclick="window.location.href='/logout'") Logout
+        .messages-box
+    .col-7.px-0
+      .statDiv
+      #chatcontainer.px-4.py-5.chat-box.bg-white
+        .h2 Click A Memeber For Sending Messages
+      .input-group
+        input.form-control.rounded-0.border-0.py-4.bg-light(type='text' placeholder='Type a message' aria-describedby='button-addon2' id='replyArea')
+        .input-group-append
+          button#sendMessage.btn.btn-link(type='submit')
+            i.fa.fa-paper-plane
+#userModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="userModal", aria-hidden="true")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            h5#modTitle.modal-title 
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+          .modal-body
+              table.table
+                tbody
+                  tr
+                    th(scope="row") User Name
+                    td#Uname
+                  tr
+                    th(scope="row") User Register Date
+                    td#regDate
+                  tr
+                    th(scope="row") Country
+                    td#Ucountry
+                  tr
+                    th(scope="row") Email
+                    td#Umail
+                  tr
+                    th(scope="row") Language
+                    td#Ulang
+          .modal-footer
+            button.btn.btn-secondary(type="button", data-dismiss="modal") Close
+script.
+  var myUsername = '!{myUsername}';
+  var mySockId = !{mySockId};
+  var activeChat = '!{activeChat}';
+  var myUserList = [];
+  var mySocketName = "";
+script(src='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js')  
+script(src='assets/js/inputEmoji.js')
+script(src='assets/js/chat.js')

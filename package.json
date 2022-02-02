@@ -17,8 +17,14 @@
   },
   "homepage": "https://github.com/Sahin8220/myCahtApp#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.6",
     "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
     "socket.io": "^4.4.1",
+    "socket.io-client": "^4.4.1",
     "sqlite3": "^5.0.2"
   }
 }

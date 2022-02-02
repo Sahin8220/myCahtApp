@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js')
+    script(src='//cdn.jsdelivr.net/npm/sweetalert2@11')
+    link(rel='stylesheet' href='assets/css/style.css')
+    title chatApp Login
+  body.text-center
+    form.form-signin(action="/makeLogin",method="POST")
+      img.mb-4(src="https://ui-avatars.com/api/?name=ChatApp", alt="", width="72", height="72")
+      h1.h3.mb-3.font-weight-normal Please Login
+      label.sr-only(for="user_name") User Name
+      input.form-control(type="email", placeholder="Your Email",name="user_name" , required, autofocus)
+      label.sr-only(for="user_pass") Password
+      input.form-control(type="password", placeholder="Password",name="user_pass",required)
+      button.btn.btn-lg.btn-primary.btn-block(type="submit") Login
+      p 
+       a(href="/register") Dont Have An Account?
+script(src='assets/js/login.js')
