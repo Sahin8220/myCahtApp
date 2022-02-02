@@ -5,7 +5,7 @@
 >Download Project
 >Run for install
 
-`nmp install`
+`npm install`
 
 ## 💻Local Run
 
